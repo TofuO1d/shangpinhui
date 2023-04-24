@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .box{
+            width: 1200px;
+            height: 370px;
+            margin: 100px auto 0px;
+        }
+        .item{
+            width: 280PX;
+            height: 370px;
+            background-color: red;
+            float: left;
+            margin: 0px 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .item_mask{
+            width: 280PX;
+            height: 370px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            transition: background-color ease .5s;
+        }
+        .item-title{
+            /* border: 1px solid red; */
+            position: absolute;
+            left: 20px;
+            color:aliceblue;
+            font-size: 20px;
+            transition: all ease .5s;
+            transform: translateY(-800%);
+        }
+        .item-info{
+            position: absolute;
+            top: 320px;
+            left: 20px;
+            right: 20px;
+            font-size: 14px;
+            color: white;
+            top: 370px;
+            transition: all ease .5s;
+        }
+        .item:hover .item_mask{
+            background-color: rgba(0, 0, 0,0.5); 
+        }
+         .item:hover .item-title{
+            transform: translateY(250px);
+        }
+        .item:hover .item-info{
+            top: 320px;
+        } 
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item"><img src="images/测试.jpg" alt="">
+        <div class="item_mask"></div>
+        <div class="item-title">sdfasdfads</div>
+        <div class="item-info">dasfdasfadsfdagadsfadsfad</div>
+        </div>
+        <div class="item"><img src="images/测试.jpg" alt=""></div>
+        <div class="item"><img src="images/测试.jpg" alt=""></div>
+        <div class="item"><img src="images/测试.jpg" alt=""></div>
+    </div>
+</body>
+</html>
